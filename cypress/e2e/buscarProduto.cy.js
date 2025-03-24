@@ -15,7 +15,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Busca por palavras-chave pressionando a tecla “Enter”', () => {
-      cy.buscarProdutoComEnter('iPhone')
+      cy.buscarProdutoComEnter('iPhone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -32,7 +32,7 @@ describe('Buscar Produto', () => {
       cy.get('h3.poly-component__title-wrapper')
         .should('be.visible')
         .first()
-        .should('include.text', 'iPhone')      
+        .should('include.text', 'iPhone')    
       })
     })
 
