@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2025-03-24T03:48:15.520Z",
-    "end": "2025-03-24T03:48:33.654Z",
-    "duration": 18134,
+    "start": "2025-03-24T04:29:01.745Z",
+    "end": "2025-03-24T04:29:22.001Z",
+    "duration": 20256,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9ca23be5-449b-42d1-95c3-44b1f344a56a",
+      "uuid": "2c92fe55-6a07-49b7-ab16-61e58ad6057b",
       "title": "",
       "fullFile": "cypress\\e2e\\buscarProduto.cy.js",
       "file": "cypress\\e2e\\buscarProduto.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+          "uuid": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
           "title": "Buscar Produto",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Busca por palavras-chave clicando no botão de lupa",
               "fullTitle": "Buscar Produto Busca por palavras-chave clicando no botão de lupa",
               "timedOut": null,
-              "duration": 5339,
+              "duration": 5645,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.buscarProdutoComLupa('iPhone 12');\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.url().should('contains', '/iphone-12');\n  cy.get('h3.poly-component__title-wrapper').should('be.visible').first().should('include.text', 'iPhone');\n});",
               "err": {},
-              "uuid": "be85094b-4d64-46f9-959e-f4c3c3a3a1d6",
-              "parentUUID": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+              "uuid": "84c55ffe-b0bc-4b73-bf10-cbb35512f7d1",
+              "parentUUID": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Busca por palavras-chave pressionando a tecla “Enter”",
               "fullTitle": "Buscar Produto Busca por palavras-chave pressionando a tecla “Enter”",
               "timedOut": null,
-              "duration": 2762,
+              "duration": 3086,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.buscarProdutoComEnter('iPhone');\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.url().should('contains', '/iphone-12');\n  cy.get('h3.poly-component__title-wrapper').should('be.visible').first().should('include.text', 'iPhone');\n});",
               "err": {},
-              "uuid": "b8379c64-df23-457d-8921-331c8c39a95a",
-              "parentUUID": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+              "uuid": "a63410ef-bc4a-4597-8874-f2b9a08776dd",
+              "parentUUID": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Busca por palavras-chave com erro de digitação",
               "fullTitle": "Buscar Produto Busca por palavras-chave com erro de digitação",
               "timedOut": null,
-              "duration": 3073,
+              "duration": 3513,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.buscarComErroDigitacao('ipone');\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.url().should('contains', '/ipone-12');\n  cy.get('h3.poly-component__title-wrapper').should('be.visible').first().should('include.text', 'iPhone');\n});",
               "err": {},
-              "uuid": "aee21d24-0092-4dc7-a7ae-12d8012592a6",
-              "parentUUID": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+              "uuid": "a330d3af-7140-44c9-b1c7-2b8988052c76",
+              "parentUUID": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância",
               "fullTitle": "Buscar Produto Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância",
               "timedOut": null,
-              "duration": 2476,
+              "duration": 2836,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.buscarProdutoComEnter();\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.url().should('contains', '/iphone-12');\n  cy.get('h3.poly-component__title-wrapper').should('be.visible').first().should('include.text', 'iPhone');\n  cy.get('span[id=\":R2m55ie:-label\"]').should('have.text', 'Mais relevantes');\n});",
               "err": {},
-              "uuid": "7a0dc508-e584-4d42-b2e6-b06dc6db679f",
-              "parentUUID": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+              "uuid": "ee03cf77-c30f-4c2a-86f6-0513670bdd9d",
+              "parentUUID": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
               "isHook": false,
               "skipped": false
             },
@@ -110,7 +110,7 @@
               "title": "O produto relacionado à busca por palavras-chave deve conter o valor",
               "fullTitle": "Buscar Produto O produto relacionado à busca por palavras-chave deve conter o valor",
               "timedOut": null,
-              "duration": 3021,
+              "duration": 3198,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -119,24 +119,24 @@
               "context": null,
               "code": "cy.buscarProdutoComEnter();\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.url().should('contains', '/iphone-12');\n  cy.get('h3.poly-component__title-wrapper').should('be.visible').first().should('include.text', 'iPhone');\n  cy.get('.andes-money-amount__fraction').eq(1).invoke('text').should('not.be.empty').should('match', /^-?\\d+(\\.\\d+)?$/);\n});",
               "err": {},
-              "uuid": "ab0b8907-9d16-490e-84c0-42d913cbeba6",
-              "parentUUID": "8f5fa793-a3df-49d5-9aa2-9c3517c70ead",
+              "uuid": "cf27011f-ed59-4a7c-972c-4730aa601099",
+              "parentUUID": "7cfd9e47-2f76-406e-a84e-d5b8a44d7a42",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "be85094b-4d64-46f9-959e-f4c3c3a3a1d6",
-            "b8379c64-df23-457d-8921-331c8c39a95a",
-            "aee21d24-0092-4dc7-a7ae-12d8012592a6",
-            "7a0dc508-e584-4d42-b2e6-b06dc6db679f",
-            "ab0b8907-9d16-490e-84c0-42d913cbeba6"
+            "84c55ffe-b0bc-4b73-bf10-cbb35512f7d1",
+            "a63410ef-bc4a-4597-8874-f2b9a08776dd",
+            "a330d3af-7140-44c9-b1c7-2b8988052c76",
+            "ee03cf77-c30f-4c2a-86f6-0513670bdd9d",
+            "cf27011f-ed59-4a7c-972c-4730aa601099"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16671,
+          "duration": 18278,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -159,7 +159,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "mochawesome",
+        "reportFilename": "relatorio-final-testes",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -170,8 +170,8 @@
     },
     "marge": {
       "options": {
-        "id": "default",
         "reportDir": "cypress/reports",
+        "reportFilename": "relatorio-final-testes",
         "overwrite": true,
         "html": true,
         "json": true

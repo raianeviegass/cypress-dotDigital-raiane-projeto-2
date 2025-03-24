@@ -12,9 +12,9 @@ module.exports = defineConfig({
   reporterOptions: {
       reportDir: 'cypress/reports',
       reportFilename: "relatorio-final-testes",
-      overwrite: false,
+      overwrite: true,
       html: true,
-      json: false,
+      json: true,
   }
 
 });
