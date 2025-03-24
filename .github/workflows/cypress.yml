@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
-          path: /home/runner/work/cypress-dotDigital-raiane-test/cypress-dotDigital-raiane-test/cypress/reports/relatorio-final-testes.html
+          path: cypress/reports/relatorio-final-testes.html
