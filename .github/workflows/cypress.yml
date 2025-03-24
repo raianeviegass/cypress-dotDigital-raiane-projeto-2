@@ -23,12 +23,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      
-      - name: Ensure Cypress binary has execution permissions
-        run: chmod +x ./node_modules/.bin/cypress
-
-      - name: Install Cypress binary
-        run: npx cypress install
 
       - name: Run Cypress tests
-        run: npx cypress run --headless
+        run: npm run test
+      
+      - name: Rename mochawesome report
+        run: mv cypress/reports/mochawesome.html cypress/reports/meu-relatorio-final.html
+
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome-report
+          path: cypress/reports/relatorio-final-testes.html
