@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress');
+const { defineConfig } = require('cypress');  // Importar defineConfig corretamente
 
 module.exports = defineConfig({
   e2e: {
@@ -6,15 +6,15 @@ module.exports = defineConfig({
     viewportWidth: 1280,
     viewportHeight: 720,
     video: false,
-    retries: 2,
+    retries: 1,
+    screenshotsFolder: './reports/screenshots',
   },
   reporter: 'mochawesome',
   reporterOptions: {
-      reportDir: 'cypress/reports',
-      reportFilename: "relatorio-final-testes",
-      overwrite: true,
-      html: true,
-      json: true,
+    reportDir: './reports',
+    reportFilename: 'relatorio-final-testes',
+    overwrite: true,
+    html: true,
+    json: true,
   }
-
 });

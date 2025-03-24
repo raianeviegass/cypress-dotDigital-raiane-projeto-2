@@ -4,7 +4,7 @@ describe('Buscar Produto', () => {
   })
 
     it('Busca por palavras-chave clicando no botão de lupa', () => {
-      cy.buscarProdutoComLupa('iPhone 12')
+      cy.buscarProdutoComLupa('iphone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -15,7 +15,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Busca por palavras-chave pressionando a tecla “Enter”', () => {
-      cy.buscarProdutoComEnter('iPhone 12')
+      cy.buscarProdutoComEnter('iphone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -37,7 +37,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância', () => {
-      cy.buscarProdutoComEnter('iPhone 12')
+      cy.buscarProdutoComEnter('iphone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -49,8 +49,8 @@ describe('Buscar Produto', () => {
       })
    })
 
-    it('O produto relacionado à busca por palavras-chave deve conter o valor', () => {
-      cy.buscarProdutoComEnter('iPhone 12')
+    it('O produto relacionado à busca por palavras-chave deve conter seu preço', () => {
+      cy.buscarProdutoComEnter('iphone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
