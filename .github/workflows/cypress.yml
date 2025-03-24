@@ -30,8 +30,11 @@ jobs:
       - name: Rename mochawesome report
         run: mv cypress/reports/mochawesome.html cypress/reports/meu-relatorio-final.html
 
+      - name: Verify report file exists
+        run: ls -l cypress/reports/
+
       - name: Upload report as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
           path: cypress/reports/relatorio-final-testes.html
