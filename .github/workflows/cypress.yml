@@ -32,12 +32,12 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run test
-      
-      - name: Rename mochawesome report
-        run: mv cypress/reports/mochawesome.html cypress/reports/meu-relatorio-final.html
 
       - name: Verify report file exists
         run: ls -l cypress/reports/
+      
+      - name: Rename mochawesome report
+        run: mv cypress/reports/mochawesome.html cypress/reports/meu-relatorio-final.html
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
