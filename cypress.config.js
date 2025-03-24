@@ -8,15 +8,13 @@ module.exports = defineConfig({
     video: false,
     retries: 2,
   },
-  reporter: 'cypress-multi-reporters',
+  reporter: 'mochawesome',
   reporterOptions: {
-    reporterEnabled: 'mochawesome',
-    mochawesomeReporterOptions: {
       reportDir: 'cypress/reports',
-      overwrite: true,
+      reportFilename: "relatorio-final-testes",
+      overwrite: false,
       html: true,
-      json: true,
-    }
+      json: false,
   }
 
 });
