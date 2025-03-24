@@ -26,7 +26,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Busca por palavras-chave com erro de digitação', () => {
-      cy.buscarComErroDigitacao('ipone')
+      cy.buscarComErroDigitacao('ipone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/ipone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -37,7 +37,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância', () => {
-      cy.buscarProdutoComEnter()
+      cy.buscarProdutoComEnter('iPhone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
@@ -50,7 +50,7 @@ describe('Buscar Produto', () => {
    })
 
     it('O produto relacionado à busca por palavras-chave deve conter o valor', () => {
-      cy.buscarProdutoComEnter()
+      cy.buscarProdutoComEnter('iPhone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/iphone-12')
       cy.get('h3.poly-component__title-wrapper')
