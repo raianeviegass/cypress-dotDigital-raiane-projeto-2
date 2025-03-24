@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
-    "posttest": "mv cypress/reports/mochawesome.html cypress/reports/meu-relatorio-final.html"
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
