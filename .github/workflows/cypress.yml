@@ -39,5 +39,5 @@ jobs:
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mochawesome-report
+          name: Relatório dos testes
           path: cypress/reports/relatorio-final-testes.html
