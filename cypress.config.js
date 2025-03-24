@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress');  // Importar defineConfig corretamente
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
@@ -17,4 +17,5 @@ module.exports = defineConfig({
     html: true,
     json: true,
   }
-});
+
+})
