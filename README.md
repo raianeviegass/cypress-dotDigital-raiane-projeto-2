@@ -1,10 +1,11 @@
 
 # Projeto de Testes Automáticos | Cypress Dot Digital Raiane-Projeto-2
 
-Neste projeto eu utilizei o **Cypress** para automatizar os testes de uma aplicação web de MarketPlace, com foco na criação de **comandos personalizados**. O objetivo de utilizá-los foi tornar os testes mais reutilizáveis.
+Neste projeto eu utilizei o **Cypress** para automatizar os testes de uma aplicação web de MarketPlace, com foco na criação de **comandos personalizados**. O objetivo de utilizá-los foi tornar os testes mais reutilizáveis
 
 ## Índice
 
+- [Sobre o Projeto](#sobre-o-projeto)
 - [Pré-requisitos](#pré-requisitos)
 - [Clone do repositório para o ambiente local](#clone-do-repositorio-para-o-ambiente-local)
 - [Estrutura do Projeto](#estrutura-do-projeto)
@@ -13,6 +14,10 @@ Neste projeto eu utilizei o **Cypress** para automatizar os testes de uma aplica
 - [Rodando os Testes localmente](#rodando-os-testes-localmente)
 - [Rodando os Testes na Pipeline do Github](#rodando-os-testes-na-pipeline-do-github)
 - [Acessando o Relatório de Testes gerado](#acessando-o-relatório-de-testes-gerado)
+
+## Sobre o Projeto
+
+Neste projeto eu quis demonstrar como criar testes com Cypress utilizando os comandos personalizados. Ele melhora a legibilidade, permite a reutilização de código, facilita a manutenção e contribui para testes mais eficientes e menos propensos a erros, além de ser de fácil compreensão para desenvolvedores iniciantes.
 
 ## Pré-requisitos
 
