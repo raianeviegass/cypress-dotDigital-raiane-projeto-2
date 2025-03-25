@@ -130,7 +130,6 @@ on:
 
 ## Acessando o Relatório de Testes gerado
 
-
  **Modo local**:  
    1. Rode os testes localmente conforme orientações na sessão - [Rodando os Testes localmente](#rodando-os-testes-localmente)   
    2. Após a execução dos testes, um repositório nomeado como `reports` será gerado
