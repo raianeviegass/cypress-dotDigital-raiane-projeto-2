@@ -37,7 +37,15 @@ jobs:
         run: ls -l ./reports/
 
       - name: Upload report as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/download-artifact@v2
         with:
           name: Relatório dos testes
-          path: ./reports/
+          path: ./docs/reports/
+
+      - name: Commit e push do relatório para a branch gh-pages
+        run: |
+          git config --global user.email "raianeviegass@gmail.com"
+          git config --global user.name "Raiane Viegas"
+          git add docs/reports/
+          git commit -m "Adicionando relatório de testes"
+          git push origin master  # Pode ser 'main', se preferir usar a branch principal
