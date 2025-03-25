@@ -37,7 +37,13 @@ jobs:
         run: ls -l ./reports/
 
       - name: Upload report as artifact
-        uses: actions/download-artifact@v2
+        uses: actions/upload-artifact@v4
+        with:
+          name: Relatório dos testes
+          path: ./reports/
+
+      - name: Baixar artefato do relatório
+        uses: actions/download-artifact@v4
         with:
           name: Relatório dos testes
           path: ./docs/reports/
@@ -48,4 +54,4 @@ jobs:
           git config --global user.name "Raiane Viegas"
           git add docs/reports/
           git commit -m "Adicionando relatório de testes"
-          git push origin master  # Pode ser 'main', se preferir usar a branch principal
+          git push origin master
