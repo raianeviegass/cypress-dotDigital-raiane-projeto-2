@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-25T05:43:19.549Z",
+    "end": "2025-03-25T05:43:39.291Z",
+    "duration": 19742,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1afee28e-217f-41e7-b60e-020ff0c3d890",
+      "title": "",
+      "fullFile": "cypress\\e2e\\buscarProduto.cy.js",
+      "file": "cypress\\e2e\\buscarProduto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+          "title": "Buscar Produto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Busca por palavras-chave clicando no botão de lupa",
+              "fullTitle": "Buscar Produto Busca por palavras-chave clicando no botão de lupa",
+              "timedOut": null,
+              "duration": 5436,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarProduto('iphone 12', 'Lupa');\ncy.validaProdutoExibido();",
+              "err": {},
+              "uuid": "57260a37-4b7b-4181-9de0-51b2be298be9",
+              "parentUUID": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Busca por palavras-chave pressionando a tecla “Enter”",
+              "fullTitle": "Buscar Produto Busca por palavras-chave pressionando a tecla “Enter”",
+              "timedOut": null,
+              "duration": 3212,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarProduto('iphone 12', 'Enter');\ncy.validaProdutoExibido();",
+              "err": {},
+              "uuid": "9630c377-629a-415c-a0b8-d1e07ee68c4e",
+              "parentUUID": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Busca por palavras-chave com erro de digitação",
+              "fullTitle": "Buscar Produto Busca por palavras-chave com erro de digitação",
+              "timedOut": null,
+              "duration": 3393,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarProduto('ipone 12', 'lupa');\ncy.validaProdutoExibido();",
+              "err": {},
+              "uuid": "d7dd30dc-8550-4d1b-a3c3-ffb4c75e1b0b",
+              "parentUUID": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância",
+              "fullTitle": "Buscar Produto Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância",
+              "timedOut": null,
+              "duration": 2896,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarProduto('iphone 12', 'enter');\ncy.validaProdutoExibido();\ncy.origin('https://lista.mercadolivre.com.br/', () => {\n  cy.get('span[id=\":R2m55ie:-label\"]').should('have.text', 'Mais relevantes');\n});",
+              "err": {},
+              "uuid": "0b632c17-d24b-4809-bd50-6a98d96f8e5d",
+              "parentUUID": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O produto relacionado à busca por palavras-chave deve conter seu preço",
+              "fullTitle": "Buscar Produto O produto relacionado à busca por palavras-chave deve conter seu preço",
+              "timedOut": null,
+              "duration": 3379,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.buscarProduto('iphone 12', 'lupa');\ncy.verificaSeOProdutoTemPreco();",
+              "err": {},
+              "uuid": "94cb1c1b-6a3b-4063-855d-35f55a419f48",
+              "parentUUID": "c9a93f14-b795-41f3-97f4-ecf64938afbc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57260a37-4b7b-4181-9de0-51b2be298be9",
+            "9630c377-629a-415c-a0b8-d1e07ee68c4e",
+            "d7dd30dc-8550-4d1b-a3c3-ffb4c75e1b0b",
+            "0b632c17-d24b-4809-bd50-6a98d96f8e5d",
+            "94cb1c1b-6a3b-4063-855d-35f55a419f48"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18316,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "relatorio-final-testes",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./reports",
+        "reportFilename": "relatorio-final-testes",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

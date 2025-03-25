@@ -39,14 +39,3 @@ Cypress.Commands.add('verificaSeOProdutoTemPreco', () => {
       .should('contain', '$')
   })
 })
-
-Cypress.Commands.add('verificaSeOProdutoExibePreco', () => {
-  cy.validaProdutoExibido()
-  cy.origin('https://lista.mercadolivre.com.br/', () => {
-    cy.get('.andes-money-amount__fraction')
-      .eq(1)
-      .invoke('text')
-      .should('not.be.empty')
-      .should('match', /^-?\d+(\.\d+)?$/)
-  })
-})

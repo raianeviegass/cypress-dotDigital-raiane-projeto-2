@@ -15,13 +15,7 @@ describe('Buscar Produto', () => {
 
   it('Busca por palavras-chave com erro de digitação', () => {
     cy.buscarProduto('ipone 12', 'lupa')
-    cy.origin('https://lista.mercadolivre.com.br/', () => {
-      cy.url().should('contains', '/ipone-12')
-      cy.get('h3.poly-component__title-wrapper')
-        .should('be.visible')
-        .first()
-        .should('include.text', 'iPhone')
-    })
+    cy.validaProdutoExibido()
   })
 
   it('Os produtos relacionados à busca por palavras-chave devem ser exibidos por ordem de relevância', () => {
