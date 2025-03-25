@@ -26,7 +26,7 @@ describe('Buscar Produto', () => {
     })
 
     it('Busca por palavras-chave com erro de digitação', () => {
-      cy.buscarComErroDigitacao('ipone 12')
+      cy.buscarProdutoComLupa('ipone 12')
       cy.origin('https://lista.mercadolivre.com.br/', () => {
       cy.url().should('contains', '/ipone-12')
       cy.get('h3.poly-component__title-wrapper')

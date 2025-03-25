@@ -1,11 +1,12 @@
 
 # Projeto de Testes Automáticos | Cypress Dot Digital Raiane-Projeto-2
 
-Neste projeto eu utilizei o **Cypress** para automatizar os testes de uma aplicação web de MarketPlace, com foco na criação de **comandos personalizados**. O objetivo em utilizá-los foi tornar os testes mais reutilizáveis.
+Neste projeto eu utilizei o **Cypress** para automatizar os testes de uma aplicação web de MarketPlace, com foco na criação de **comandos personalizados**. O objetivo de utilizá-los foi tornar os testes mais reutilizáveis.
 
 ## Índice
 
 - [Pré-requisitos](#pré-requisitos)
+- [Clone do repositório para o ambiente local](#clone-do-repositorio-para-o-ambiente-local)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Comandos Personalizados](#comandos-personalizados)
 - [Configuração](#configuração)
@@ -22,6 +23,18 @@ Antes de começar, é necessário ter o **Node.js** e o **Cypress** instalados. 
 
    ```bash
    npm install cypress --save-dev
+   ```
+
+## Clone do repositório para o ambiente local
+
+1. Clone este repositório para sua máquina local
+
+   ```bash
+   git clone https://github.com/raianeviegass/cypress-dotDigital-raiane-projeto-2
+   ```
+2. Instale as dependências utilizando o seguinte comando pelo terminal:
+   ```bash
+   npm install
    ```
 
 ## Estrutura do Projeto
@@ -103,7 +116,7 @@ Você pode rodar os testes de duas formas:
 ## Rodando os Testes na Pipeline do Github
 
 Foi criado o arquivo `cypress.yml` para configuração da pipeline de execução automática dos testes desse projeto no Github Actions.
-Abaixo você verá a configuração básica padrão que disparada a execução deles na nuvem a cada push que é realizado no projeto:
+Abaixo você verá a configuração básica padrão que dispara a execução deles na nuvem a cada push que é realizado no projeto:
 
 ```yml
 on:
@@ -118,7 +131,7 @@ on:
 ## Acessando o Relatório de Testes gerado
 
 
- **Modo local** (com a interface gráfica do Cypress):  
+ **Modo local**:  
    1. Rode os testes localmente conforme orientações na sessão - [Rodando os Testes localmente](#rodando-os-testes-localmente)   
    2. Após a execução dos testes, um repositório nomeado como `reports` será gerado
    3. Acesse esse diretório e clique com botão direito do mouse no arquivo `relatorio-final-testes.html`
@@ -127,10 +140,10 @@ on:
 
  **Modo Pipeline** (Execuções já realizadas):  
    1. Dentro do repositório desse projeto no Github, acesse o menu `Actions`
-   2. Selecione a última execução ddos testes desse workflow
-   3. Na sessão de Artfacts, clique em `Relatório dos testes` e um aquivo zipado desse relatório será baixado para seu computador
+   2. Selecione a última execução dos testes desse workflow
+   3. Na sessão de Artifacts, clique em `Relatório dos testes` e um arquivo zipado desse relatório será baixado para seu computador
    4. Acesse o local onde foi feito o download do relatório e descompacte a pasta zipada
    5. Dê um duplo clique no arquivo `relatorio-final-testes.html` para que ele seja aberto pelo navegador padrão do seu computador
 
  **Modo Pipeline** (Novas execuções):
-    Conforme informado na sessão - [Rodando os Testes na Pipeline do Github](#rodando-os-testes-na-pipeline-do-github), basta realizar um push para o projeto e acessar a execução da pipeline de testes seguindo os passos informados acima.
+    Conforme informado na sessão - [Rodando os Testes na Pipeline do Github](#rodando-os-testes-na-pipeline-do-github), basta realizar um push para o projeto (após cloná-lo para seu ambiente local, confome orientado na sessão - [Clone do repositório para o ambiente local](#clone-do-repositorio-para-o-ambiente-local)) e acessar a execução da pipeline de testes seguindo os passos informados no passo **Modo Pipeline** (Execuções já realizadas).

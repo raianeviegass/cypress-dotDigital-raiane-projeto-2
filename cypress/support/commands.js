@@ -20,14 +20,3 @@ Cypress.Commands.add('buscarProdutoComLupa', (produto) => {
       .focus()
       .type('{enter}');
   })
-
-  Cypress.Commands.add('buscarComErroDigitacao', (produto) => {
-    cy.get('.home').should('be.visible')
-    cy.get('.nav-search-input')
-      .should('be.visible')
-      .type(produto)
-    cy.get('.nav-search-input')
-      .should('be.visible')
-      .focus()
-      .type('{enter}');
-  })
