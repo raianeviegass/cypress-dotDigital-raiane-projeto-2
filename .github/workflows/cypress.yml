@@ -47,6 +47,11 @@ jobs:
         with:
           name: Relatório dos testes
           path: ./docs/reports/
+    
+      - name: Configurar Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit e push do relatório para a branch gh-pages
         run: |
@@ -54,4 +59,4 @@ jobs:
           git config --global user.name "Raiane Viegas"
           git add docs/reports/
           git commit -m "Adicionando relatório de testes"
-          git push origin master
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:master
