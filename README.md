@@ -130,12 +130,21 @@ on:
 
 ## Acessando o Relatório de Testes gerado
 
+  **Pré-condição para o modo Pipeline**: Para obter acesso ao link do relatório de teste gerado na sessão de "Artifacts" do workflow no Github Actions, é necessário que esteja autenticado/logado no GitHub.
+
  **Modo local**:  
    1. Rode os testes localmente conforme orientações na sessão - [Rodando os Testes localmente](#rodando-os-testes-localmente)   
    2. Após a execução dos testes, um repositório nomeado como `reports` será gerado
    3. Acesse esse diretório e clique com botão direito do mouse no arquivo `relatorio-final-testes.html`
    4. Selecione a opção de `Reveal in File Explorer`
    5. Dê um duplo clique no arquivo `relatorio-final-testes.html` para que ele seja aberto pelo navegador padrão do seu computador
+
+   **Observação 1**: Caso o seu navegador seja o Gooogle Chrome e ele esteja com problemas para visualizar o relatório (talvez exibindo uma tela toda branca), tente abrir o arquivo utilizando outros navegadores, por exemplo Firefox ou Edge.
+
+   **Observação 2**: Se mesmo ao tentar utilizar outros navegadores o arquivo esteja sendo exibido em branco, por favor, siga os passos abaixo:
+      1. Instale a extensão "Live Server" no Visual Studio Code
+      2. Acesse o diretório `reports` e clique com botão direito do mouse no arquivo `relatorio-final-testes.html`
+      3. Selecione a opção de `Open with Live Server`
 
  **Modo Pipeline** (Execuções já realizadas):  
    1. Dentro do repositório desse projeto no Github, acesse o menu `Actions`
@@ -144,5 +153,12 @@ on:
    4. Acesse o local onde foi feito o download do relatório e descompacte a pasta zipada
    5. Dê um duplo clique no arquivo `relatorio-final-testes.html` para que ele seja aberto pelo navegador padrão do seu computador
 
+   **Observação**: Caso esteja tendo problemas para visualizar o relatório baixado, mesmo tentando utilizar outros navegadores, siga os passos abaixo:
+      1. Instale a extensão "Live Server" no Visual Studio Code
+      2. Ainda no Visual Studio Code, acesse o menu `File` e selecione a opção `Open Folder...`
+      3. Vá até o local onde a pasta descompactada do relatório está e a selecione (a pasta raiz) 
+      4. Agora, clique com o botão direito do mouse no arquivo `relatorio-final-testes.html`
+      3. Selecione a opção de `Open with Live Server
+
  **Modo Pipeline** (Novas execuções):
-    Conforme informado na sessão - [Rodando os Testes na Pipeline do Github](#rodando-os-testes-na-pipeline-do-github), basta realizar um push para o projeto (após cloná-lo para seu ambiente local, confome orientado na sessão - [Clone do repositório para o ambiente local](#clone-do-repositorio-para-o-ambiente-local)) e acessar a execução da pipeline de testes seguindo os passos informados no passo **Modo Pipeline** (Execuções já realizadas).
+    Conforme informado na sessão - [Rodando os Testes na Pipeline do Github](#rodando-os-testes-na-pipeline-do-github), basta realizar um push para o projeto (após cloná-lo para seu ambiente local, confome orientado na sessão - [Clone do repositório para o ambiente local](#clone-do-repositorio-para-o-ambiente-local)) e acessar a execução da pipeline de testes seguindo os passos informados no passo **Modo Pipeline** (Execuções já realizadas), assim como o Relatório de testes gerado.
