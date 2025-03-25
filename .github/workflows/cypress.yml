@@ -59,4 +59,4 @@ jobs:
           git config --global user.name "Raiane Viegas"
           git add docs/reports/
           git commit -m "Adicionando relatório de testes"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:master
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/raianeviegass/cypress-dotDigital-raiane-projeto-2.git HEAD:master
